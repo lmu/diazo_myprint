@@ -1,0 +1,14 @@
+
+main {
+    background-color: white;
+}
+
+.page_outerbox {
+    font-family: inherit;
+    padding: 3em 0; 
+}
+
+.pageborder {
+    width: 100%;
+    margin: 0;
+}

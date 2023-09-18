@@ -1,0 +1,6 @@
+diazo[wsgi]==1.5.0
+# Paste==3.5.3
+# PasteDeploy==3.0.1
+# gunicorn==21.2.0
+PasteScript==3.3.0
+-e ./theme_helpers

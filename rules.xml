@@ -1,0 +1,29 @@
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!-- <theme href="theme/theme.html" /> -->
+    <theme href="https://www.lmu.de/de/index.html" />
+
+    <after css:theme="head link:last-of-type" content="/html/head/link" />
+    <after css:theme="head script:last-of-type" content="/html/head/script" />
+    <after css:theme-children="html > head">
+        <link rel="stylesheet" href="/static/theme.css" />
+        <script src="/static/theme.js" />
+    </after>
+
+    <drop css:content="#ContentPlaceHolder1_imgFrontpage" />
+    <drop css:content=".footer" />
+    <drop css:content="#hfBackgroundImage" />
+
+    <replace css:theme-children="#r-main" css:content-children="body" />
+    <!-- <replace css:theme-children="#r-main">
+        <div class="grid__container">
+            <xsl:copy-of select="//div[@class = 'main']" />
+        </div>
+    </replace> -->
+
+    <drop css:theme=".header__navigation-wrapper" />
+
+</rules>
