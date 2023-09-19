@@ -9,7 +9,6 @@ class NoCSPProxy(proxy.Proxy):
                 for name, value in headers
                 if name.lower() != "content-security-policy"
             ]
-            clean_headers.append(("Access-Control-Allow-Origin", "https://cms-cdn.lmu.de/"))
             return start_response(status, clean_headers, **kwargs)
 
         resp = super().__call__(environ, wrap_start_response)

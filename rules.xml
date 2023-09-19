@@ -16,6 +16,12 @@
     <drop css:content="#ContentPlaceHolder1_imgFrontpage" />
     <drop css:content=".footer" />
     <drop css:content="#hfBackgroundImage" />
+    <drop css:content="#ContentPlaceHolder1_imgLogo" />
+    <drop css:content="img.Top_left" />
+
+    <replace css:content="#imgCompanyLogo">
+        <h2>Cloud printing</h2>
+    </replace>
 
     <replace css:theme-children="#r-main" css:content-children="body" />
     <!-- <replace css:theme-children="#r-main">
@@ -24,6 +30,6 @@
         </div>
     </replace> -->
 
-    <drop css:theme=".header__navigation-wrapper" />
+    <drop css:theme-children=".header__navigation-wrapper" />
 
 </rules>
