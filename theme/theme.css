@@ -27,6 +27,24 @@ input[type="submit"]:hover {
     box-shadow: none;
 }
 
+input[type="text"],
+input[type="password"] {
+    box-shadow: none;
+    padding: 1em 0.5em;
+    font-size: 12pt;
+    background-color: #f3f3f3;
+    border: 1px solid #232323;
+    border-radius: 0;
+    transition: all 200ms ease-in-out;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background-color: white;
+}
+
 .page_outerbox {
     font-family: inherit;
     padding: 3em 0 0 20vw;
@@ -51,6 +69,7 @@ input[type="submit"]:hover {
     width: 100%;
     padding-left: 3em;
     border-left: 3px solid #2f2f2f;
+    min-height: 0;
 }
 
 .header__navigation-wrapper {
@@ -68,4 +87,64 @@ nav.c-main-navigation {
     padding: 0.5em;
     box-shadow: none;
     background-image: none;
+}
+
+
+
+/* Mensa Karte */
+
+#mensaKarteWrapper {
+    background: #f5f5f5;
+    margin-top: 3em;
+    margin-left: 20vw;
+    padding: 3em;
+    border-top: 1px solid #2f2f2f;
+    border-left: 1px solid #2f2f2f;
+}
+
+#mensaKarteWrapper img {
+    display: inline;
+}
+
+.alert-box img {
+    border: 1px solid #a0d3e8;
+    background-color: white;
+    padding: 0.3em;
+}
+
+.alert-box {
+    padding: 15px; 
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+    color: #000;
+}
+
+.alert-box.info {
+    border: 2px solid #74bfdd; 
+    background-color: #a0d3e8; 
+    border-radius: 5px; 
+    color: #000;
+}
+
+.left {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Page: Main.aspx */
+
+.page-main #form1 > div.page.pageborder > div.main > table:nth-child(4) tr {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.page-main #form1 > div.page.pageborder > div.main > table:nth-child(4) td:last-child {
+    display: none;
+}
+.page-main #form1 > div.page.pageborder > div.main > table:nth-child(4) td {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

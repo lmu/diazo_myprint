@@ -53,16 +53,30 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function _removeElements(selector) {
-        var els = document.querySelectorAll(selector);
-        [].slice.call(els).forEach(function (el) { el.parentElement.remove(el) });
+    async function loadMensaKarteContent(url) {
+        let response = await fetch(url);
+        let content = await response.text();
+        let elMain = document.getElementById("r-main");
+        let wrapper = document.createElement("div");
+        wrapper.innerHTML = content;
+        elMain.appendChild(wrapper.firstElementChild);
+    }
+
+    function addBodyPageClass() {
+        let splitPath = window.location.pathname.split("/");
+        let pageFile = splitPath.pop();
+        let pageName = pageFile.split(".")[0];
+        let pageClass = `page-${pageName.toLowerCase()}`;
+        document.body.classList.add(pageClass);
     };
 
     function init() {
+        addBodyPageClass();
         if (elLanguageSelector) {
             moveLanguageSelector();
         };
         moveActions();
+        loadMensaKarteContent("/static/mensa-karte.html");
     }
 
     init();

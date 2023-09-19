@@ -24,11 +24,6 @@
     </replace>
 
     <replace css:theme-children="#r-main" css:content-children="body" />
-    <!-- <replace css:theme-children="#r-main">
-        <div class="grid__container">
-            <xsl:copy-of select="//div[@class = 'main']" />
-        </div>
-    </replace> -->
 
     <drop css:theme-children=".header__navigation-wrapper" />
 
