@@ -91,15 +91,57 @@ nav.c-main-navigation {
 
 
 
-/* Mensa Karte */
+/* Remote content: Hinweise, Kosten */
+
+#remoteContentContainer {
+    margin-top: -1em;
+}
+
+#hinweiseKostenWrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #2f2f2f;
+    width: 70vw;
+    margin: 0 auto;
+}
+
+#hinweise,
+#kosten {
+    margin: 1.5em 0;
+    padding: 0.5em 1.5em; 
+}
+
+#hinweise {
+    border-right: 2px solid #2f2f2f;
+}
+
+#kosten table {
+    background-color: #f3f3f3;
+    width: 100%;
+}
+
+#kosten table td {
+    border: 1px solid #fff;
+    padding: 0.3em;
+    transition: all 200ms ease-in-out;
+}
+
+#kosten table tr:hover td {
+    border: 1px solid #f3f3f3;
+    background-color: #fff;
+}
+
+
+/* Remote content: Mensa Karte */
 
 #mensaKarteWrapper {
     background: #f5f5f5;
-    margin-top: 3em;
+    margin-top: -3em;
     margin-left: 20vw;
-    padding: 3em;
-    border-top: 1px solid #2f2f2f;
-    border-left: 1px solid #2f2f2f;
+    padding: 5em 3em 3em 3em;
 }
 
 #mensaKarteWrapper img {
@@ -147,4 +189,20 @@ nav.c-main-navigation {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/* Page: Login.aspx */
+
+
+/* top table rows */
+.page-login #form1 > div.page.pageborder > div.main > table:nth-child(3) > tbody > tr:nth-child(1),
+.page-login #form1 > div.page.pageborder > div.main > table:nth-child(3) > tbody > tr:nth-child(2),
+.page-login #form1 > div.page.pageborder > div.main > table:nth-child(3) > tbody > tr:nth-child(3) {
+    display: none;
+}
+
+/* bottom table rows */
+.page-login #form1 > div.page.pageborder > div.main > table:nth-child(3) > tbody > tr:nth-child(6),
+.page-login #form1 > div.page.pageborder > div.main > table:nth-child(3) > tbody > tr:nth-child(7) {
+    display: none;
 }

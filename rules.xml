@@ -25,6 +25,10 @@
 
     <replace css:theme-children="#r-main" css:content-children="body" />
 
+    <after css:theme="#r-main">
+        <div id="remoteContentContainer"></div>
+    </after>
+
     <drop css:theme-children=".header__navigation-wrapper" />
 
 </rules>

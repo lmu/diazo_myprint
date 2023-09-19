@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var elForm = document.getElementById("form1");
     var elHeader = document.querySelector(".header__navigation-wrapper");
 
+    var elRemoteContentContainer = document.getElementById("remoteContentContainer");
+
     var elHeaderNavigation = document.createElement("nav");
     elHeaderNavigation.className = "c-main-navigation";
     elHeader.appendChild(elHeaderNavigation);
@@ -33,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function moveActions() {
         var elActions = document.querySelectorAll(".HyperlinkAlignRight");
         if (elActions.length) {
-            var elActionRow = elActions[0].parentElement.parentElement;
+            // var elActionRow = elActions[0].parentElement.parentElement;
 
             var elActionsContainer = document.createElement("ul");
             elActionsContainer.className = "main-navigation__list";
@@ -53,13 +55,37 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    async function loadMensaKarteContent(url) {
+    async function _loadRemoteContent(url) {
         let response = await fetch(url);
         let content = await response.text();
-        let elMain = document.getElementById("r-main");
         let wrapper = document.createElement("div");
         wrapper.innerHTML = content;
-        elMain.appendChild(wrapper.firstElementChild);
+        return wrapper.firstElementChild;
+    }
+
+    async function _loadRemoteIntoContainer(url, container) {
+        let content = await _loadRemoteContent(url);
+        container.appendChild(content)
+    }
+
+    async function loadMensaKarteContent() {
+        _loadRemoteIntoContainer(
+            "/static/mensa-karte.html",
+            elRemoteContentContainer
+        );
+    }
+
+    async function loadHinweiseKostenContent() {
+        _loadRemoteIntoContainer(
+            "/static/hinweise-kosten.html",
+            elRemoteContentContainer
+        );
+    }
+
+    function loadRemoteContent() {
+        loadHinweiseKostenContent().then(
+            loadMensaKarteContent()
+        );
     }
 
     function addBodyPageClass() {
@@ -70,13 +96,24 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.add(pageClass);
     };
 
+    function hideInactiveErrorMessages() {
+        let els = document.querySelectorAll(
+            "#lblCapsLock, #ContentPlaceHolder1_lblInvalidPassword, #ContentPlaceHolder1_lblIdentiferNotFound");
+        [].slice.call(els).forEach(function(el){
+            if (el.style.visibility === "hidden") {
+                el.style.display = "none";
+            }
+        });
+    }
+
     function init() {
         addBodyPageClass();
         if (elLanguageSelector) {
             moveLanguageSelector();
         };
         moveActions();
-        loadMensaKarteContent("/static/mensa-karte.html");
+        loadRemoteContent();
+        hideInactiveErrorMessages();
     }
 
     init();
