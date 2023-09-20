@@ -106,6 +106,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    function hideInstallPrinterRowOnMobile() {
+        // On mobile devices, the install printer button is not
+        // present in the markup, in that case, remove the entire row.
+        let elBtn = document.getElementById("ContentPlaceHolder1_btnInstallPrinter");
+        if (!elBtn) {
+            let elBtnComputerImage = document.getElementById("ContentPlaceHolder1_Polaroid");
+            let elTable = elBtnComputerImage.parentElement.parentElement.parentElement;
+            elTable.parentElement.removeChild(elTable);
+        }
+    }
+
     function init() {
         addBodyPageClass();
         if (elLanguageSelector) {
@@ -114,6 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
         moveActions();
         loadRemoteContent();
         hideInactiveErrorMessages();
+        hideInstallPrinterRowOnMobile();
     }
 
     init();
