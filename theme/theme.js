@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function hideInactiveErrorMessages() {
         let els = document.querySelectorAll(
-            "#lblCapsLock, #ContentPlaceHolder1_lblInvalidPassword, #ContentPlaceHolder1_lblIdentiferNotFound");
+            "#ContentPlaceHolder1_lblInvalidPassword, #ContentPlaceHolder1_lblIdentiferNotFound");
         [].slice.call(els).forEach(function (el) {
             if (el.style.visibility === "hidden") {
                 el.style.display = "none";
