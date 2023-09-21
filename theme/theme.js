@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var elForm = document.getElementById("form1");
     var elHeader = document.querySelector(".header__navigation-wrapper");
 
-    var elRemoteContentContainer = document.getElementById("remoteContentContainer");
-
     var elHeaderNavigation = document.createElement("nav");
     elHeaderNavigation.className = "c-main-navigation";
     elHeader.appendChild(elHeaderNavigation);
@@ -63,29 +61,36 @@ document.addEventListener("DOMContentLoaded", function () {
         return wrapper.firstElementChild;
     }
 
-    async function _loadRemoteIntoContainer(url, container) {
+    async function _loadRemoteIntoContainer(url, container, method) {
         let content = await _loadRemoteContent(url);
-        container.appendChild(content)
+        if (method === "replace") {
+            container.replaceWith(content)
+        }
+        else {
+            container.appendChild(content)
+        }
+
     }
 
     async function loadMensaKarteContent() {
         _loadRemoteIntoContainer(
             "/static/mensa-karte.html",
-            elRemoteContentContainer
+            document.getElementById("mensaKartePlaceholder"),
+            "replace",
         );
     }
 
     async function loadHinweiseKostenContent() {
         _loadRemoteIntoContainer(
             "/static/hinweise-kosten.html",
-            elRemoteContentContainer
+            document.getElementById("hinweiseKostenPlaceholder"),
+            "replace",
         );
     }
 
     function loadRemoteContent() {
-        loadHinweiseKostenContent().then(
-            loadMensaKarteContent()
-        );
+        loadHinweiseKostenContent();
+        loadMensaKarteContent();
     }
 
     function addBodyPageClass() {
@@ -99,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function hideInactiveErrorMessages() {
         let els = document.querySelectorAll(
             "#lblCapsLock, #ContentPlaceHolder1_lblInvalidPassword, #ContentPlaceHolder1_lblIdentiferNotFound");
-        [].slice.call(els).forEach(function(el){
+        [].slice.call(els).forEach(function (el) {
             if (el.style.visibility === "hidden") {
                 el.style.display = "none";
             }
@@ -112,8 +117,10 @@ document.addEventListener("DOMContentLoaded", function () {
         let elBtn = document.getElementById("ContentPlaceHolder1_btnInstallPrinter");
         if (!elBtn) {
             let elBtnComputerImage = document.getElementById("ContentPlaceHolder1_Polaroid");
-            let elTable = elBtnComputerImage.parentElement.parentElement.parentElement;
-            elTable.parentElement.removeChild(elTable);
+            if (elBtnComputerImage) {
+                let elTable = elBtnComputerImage.parentElement.parentElement.parentElement;
+                elTable.parentElement.removeChild(elTable);
+            }
         }
     }
 

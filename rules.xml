@@ -1,10 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <rules
     xmlns="http://namespaces.plone.org/diazo"
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <!-- <theme href="theme/theme.html" /> -->
-    <theme href="https://www.lmu.de/de/index.html" />
+    <theme href="theme/theme.html" />
 
     <after css:theme="head link:last-of-type" content="/html/head/link" />
     <after css:theme="head script:last-of-type" content="/html/head/script" />
@@ -25,10 +27,9 @@
 
     <replace css:theme-children="#r-main" css:content-children="body" />
 
-    <after css:theme="#r-main">
-        <div id="remoteContentContainer"></div>
-    </after>
-
     <drop css:theme-children=".header__navigation-wrapper" />
+    
+    <drop css:theme="#stacknav" />
+    <drop css:theme="#mobilenav" />
 
 </rules>

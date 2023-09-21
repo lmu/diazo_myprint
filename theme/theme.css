@@ -113,7 +113,7 @@ nav.c-main-navigation {
 
 /* Remote content: Hinweise, Kosten */
 
-#remoteContentContainer {
+#belowContentContainer {
   margin-top: -1em;
 }
 
@@ -121,7 +121,7 @@ nav.c-main-navigation {
   position: relative;
   z-index: 1;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
   justify-content: space-between;
   background-color: #fff;
   border: 1px solid #d3d3d3;
@@ -222,6 +222,7 @@ nav.c-main-navigation {
 .UploadBorder {
     width: 100%;
     padding: 0;
+    margin: 0;
     border: none;
     box-shadow: none;
 }
@@ -389,6 +390,40 @@ ul.dxucFileList li .dxucButton a:hover {
   display: none;
 }
 
+/* Page: UpdateCardNumber.aspx */
+
+.page-updatecardnumber #form1 > div.page.pageborder > div.main > table:nth-child(3) > tbody > tr:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-updatecardnumber #form1 > div.page.pageborder > div.main > table:nth-child(3) > tbody > tr:nth-child(2) td {
+  text-align: left !important;
+  width: auto !important;
+  height: auto !important;
+  display: flex;
+}
+
+.page-updatecardnumber #form1 > div.page.pageborder > div.main > table:nth-child(3) > tbody > tr:nth-child(2) td input {
+  margin-left: 0;
+}
+
+.page-updatecardnumber #form1 > div.page.pageborder > div.main > table:nth-child(3) > tbody > tr:nth-child(2) td .ShadowButtonCenter {
+  padding: 1.5em 3.5em;
+}
+
+/* Page: ChangePrintingPreferences.aspx */
+
+.page-changeprintingpreferences #form1 > div.page.pageborder > div.main > table:nth-child(2) > tbody > tr:nth-child(2) > td.Top_left,
+.page-changeprintingpreferences #form1 > div.page.pageborder > div.main > table:nth-child(2) > tbody > tr:nth-child(3) > td.Top_left,
+.page-changeprintingpreferences #form1 > div.page.pageborder > div.main > table:nth-child(2) > tbody > tr:nth-child(4) > td.Top_left {
+  display: none;
+}
+
+.page-changeprintingpreferences #form1 > div.page.pageborder > div.main > table:nth-child(2) > tbody > tr:nth-child(5) > td {
+  text-align: left !important;
+}
+
 @media only screen and (max-width: 1024px) {
     .page_outerbox {
         width: 95vw;
@@ -401,10 +436,12 @@ ul.dxucFileList li .dxucButton a:hover {
     }
     #hinweiseKostenWrapper {
         width: 95vw;
+        flex-wrap: wrap; 
     }
     #hinweise {
         border-right: 0;
         border-bottom: 2px solid #d3d3d3;
+        padding-bottom: 3em;
     }
     #mensaKarteWrapper {
         margin-left: 5vw;
