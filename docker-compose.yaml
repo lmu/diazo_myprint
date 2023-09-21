@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+    # For development/debugging, uncomment 
+    # the command and volumes sections below,
+    # then (re)run: "docker-compose up -d"
+    # command: ["serve", "--reload", "diazo.ini"]
+    # volumes:
+    #   - .:/var/local/theme
+    ports:
+     - 5000:5000
