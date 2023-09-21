@@ -54,132 +54,18 @@
                 <div class="header__wrapper"> <a class="header__logo-wrapper"
                         href="https://www.lmu.de/en/index.html"><img class="header__logo"
                             src="/static/assets/Logo_LMU.svg" alt="Logo Ludwig Maximilians Universität München"></a>
-                    <div class="header__navigation-wrapper">
-                        <nav class="c-main-navigation" data-js-module="main-navigation">
-                            <h2 class="main-navigation__headline">Main navigation</h2>
-                            <ul class="main-navigation__list">
-                                <!-- <li class="main-navigation__list-item"> <a
-                                        href="https://www.lmu.de/en/research/index.html"
-                                        class="main-navigation__list-link"><span
-                                            class="main-navigation__list-link-text">Research</span></a> </li>
-                                <li class="main-navigation__list-item"> <a href="https://www.lmu.de/en/study/index.html"
-                                        class="main-navigation__list-link"><span
-                                            class="main-navigation__list-link-text">Study</span></a> </li>
-                                <li class="main-navigation__list-item"> <a
-                                        href="https://www.lmu.de/en/about-lmu/index.html"
-                                        class="main-navigation__list-link"><span
-                                            class="main-navigation__list-link-text">About LMU</span></a> </li>
-                                <li class="main-navigation__list-item is-bordered is-language"> <a
-                                        class="main-navigation__list-link" href="https://www.lmu.de/de/index.html"
-                                        title="Switch to German / Zur deutschen Sprachversion"> <span
-                                            class="main-navigation__list-link-text" lang="de">DE</span> <span
-                                            class="main-navigation__list-link-text-a11y" lang="de">Switch to German /
-                                            Zur deutschen Sprachversion</span> </a> </li>
-                                <li class="main-navigation__list-item is-bordered is-search"> <button type="button"
-                                        class="main-navigation__list-link is-search" data-js-item="toggle-search"> <span
-                                            class="main-navigation__list-link-text">Open / close search</span> </button>
-                                </li> -->
-                                <li id="hamburgermenu" class="main-navigation__list-item is-bordered is-last"><button
-                                        type="button" data-js-item="js-skip-links-navvuebutton"
-                                        class="main-navigation__list-link is-burger"><span
-                                            class="main-navigation__list-link-text">Open / close advanced
-                                            navigation</span></button></li>
-                            </ul>
-                        </nav>
+                    <div id="headerNavigationWrapper">
+                        <ul id="mainNavigation" class="mainNavigation"></ul>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <div id="stacknav">
-        <nav class="ml-stack-nav">
-            <h3 class="ml-stack-nav__headline">Main navigation</h3> <button class="ml-stack-nav__close">Close
-                navigation</button>
-            <ul class="ml-stack-nav__menu">
-                <li class="fragment-li">
-                    <ul class="fragment-ul"><!---->
-                        <li class="ml-stack-nav__item"><a href="https://www.lmu.de/en/index.html"
-                                class="ml-stack-nav__link is-home">
-                                <div class="ml-stack-nav__link-content"><span class="ml-stack-nav__link-text">LMU
-                                        Home</span> <!----></div>
-                            </a> <!----> <!----></li>
-                        <li class="ml-stack-nav__item"><a href="https://www.lmu.de/en/index.html#"
-                                class="ml-stack-nav__link">
-                                <div class="ml-stack-nav__link-content"><span
-                                        class="ml-stack-nav__link-text">Research</span> <span
-                                        class="ml-stack-nav__link-subhint"><span
-                                            class="ml-stack-nav__link-subhint-text">6</span> <span
-                                            class="is-aural visually-hidden">Sub-items at the next level</span></span>
-                                </div>
-                            </a> <!----> <!----></li>
-                        <li class="ml-stack-nav__item"><a href="https://www.lmu.de/en/index.html#"
-                                class="ml-stack-nav__link">
-                                <div class="ml-stack-nav__link-content"><span
-                                        class="ml-stack-nav__link-text">Study</span> <span
-                                        class="ml-stack-nav__link-subhint"><span
-                                            class="ml-stack-nav__link-subhint-text">7</span> <span
-                                            class="is-aural visually-hidden">Sub-items at the next level</span></span>
-                                </div>
-                            </a> <!----> <!----></li>
-                        <li class="ml-stack-nav__item"><a href="https://www.lmu.de/en/index.html#"
-                                class="ml-stack-nav__link">
-                                <div class="ml-stack-nav__link-content"><span class="ml-stack-nav__link-text">About
-                                        LMU</span> <span class="ml-stack-nav__link-subhint"><span
-                                            class="ml-stack-nav__link-subhint-text">6</span> <span
-                                            class="is-aural visually-hidden">Sub-items at the next level</span></span>
-                                </div>
-                            </a> <!----> <!----></li>
-                        <li class="ml-stack-nav__item"><a href="https://www.lmu.de/en/newsroom/index.html"
-                                class="ml-stack-nav__link">
-                                <div class="ml-stack-nav__link-content"><span
-                                        class="ml-stack-nav__link-text">Newsroom</span> <!----></div>
-                            </a> <!----> <!----></li>
-                        <li class="ml-stack-nav__item"><a href="https://www.lmu.de/en/index.html#"
-                                class="ml-stack-nav__link">
-                                <div class="ml-stack-nav__link-content"><span class="ml-stack-nav__link-text">Workspace
-                                        for Students</span> <span class="ml-stack-nav__link-subhint"><span
-                                            class="ml-stack-nav__link-subhint-text">8</span> <span
-                                            class="is-aural visually-hidden">Sub-items at the next level</span></span>
-                                </div>
-                            </a> <!----> <!----></li>
-                    </ul>
-                </li>
-                <li class="fragment-li">
-                    <h4 class="ml-stack-nav__sub-headline is-language">Language version</h4>
-                </li>
-                <li class="ml-stack-nav__item"><a href="https://www.lmu.de/de/index.html" class="ml-stack-nav__link">
-                        <div class="ml-stack-nav__link-content"><span class="ml-stack-nav__link-text">Deutsch</span>
-                            <span lang="de" class="ml-stack-navlink-text-a11y">Switch to German / Zur deutschen
-                                Sprachversion</span></div>
-                    </a></li>
-            </ul> <!----> <!---->
-        </nav>
+
+    <div id="aboveContentWrapper">
+        <ul id="aboveContentNavigation" class="mainNavigation"></ul>
     </div>
-    <div id="mobilenav">
-        <nav class="c-mobile-nav-toggler">
-            <ul class="mobile-nav-toggler__list">
-                <li class="mobile-nav-togler__list-item is-back"><button
-                        class="mobile-nav-toggler__list-link is-back"><span
-                            class="mobile-nav-toggler__link-content is-back"><span
-                                class="mobile-nav-toggler__link-extra is-back"></span></span> <span
-                            class="mobile-nav-toggler__link-text is-back">
-                            back
-                            <span class="mobile-nav-toggler__link-text-aural is-aural">zur vorherigen
-                                Navigationsebene</span></span></button></li>
-                <li class="mobile-nav-togler__list-item is-burger"><button
-                        class="mobile-nav-toggler__list-link is-burger"><span
-                            class="mobile-nav-toggler__link-content is-burger"><span
-                                class="mobile-nav-toggler__link-extra is-burger"></span></span> <span
-                            class="mobile-nav-toggler__link-text is-burger">
-                            Menu
-                            <span class="mobile-nav-toggler__link-text-aural is-aural">open</span></span> <span
-                            class="mobile-nav-toggler__link-text-close is-burger"><span
-                                class="mobile-nav-toggler__link-text-close-aural is-aural">Menu</span>
-                            close
-                        </span></button></li>
-            </ul>
-        </nav>
-    </div>
+
     <main id="r-main" data-js-item="main">
 
     </main>

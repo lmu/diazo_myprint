@@ -14,15 +14,15 @@ h2 {
 }
 
 .page .header tr:nth-child(1) {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .page #RightTopPanel #lblClient {
-    margin:0;
-    max-width: none;
-    height: auto;
+  margin: 0;
+  max-width: none;
+  height: auto;
 }
 
 input[type="button"],
@@ -94,14 +94,37 @@ input[type="password"]:focus {
   min-height: 0;
 }
 
-.header__navigation-wrapper {
+#aboveContentWrapper {
+  display: none;
+}
+
+#headerNavigationWrapper {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-nav.c-main-navigation {
-  border-right: 2px solid #c7c7c7;
+#mainNavigation {
+  border-right: 2px solid #00883a;
   margin-right: 1em;
+}
+
+.mainNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainNavigation li a {
+  color: #232323;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12pt;
+  padding: 0.5em 1em;
+}
+
+.mainNavigation li a:hover {
+  color: #00883a;
 }
 
 #ddllanguages {
@@ -220,129 +243,134 @@ nav.c-main-navigation {
 }
 
 .UploadBorder {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    border: none;
-    box-shadow: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
 }
 
 ul.dxucFileList {
-    width: 100%;
-    margin: 1.5em 0 0 0;
-    padding: 0;
-    max-height: none;
+  width: 100%;
+  margin: 1.5em 0 0 0;
+  padding: 0;
+  max-height: none;
 }
 
 ul.dxucFileList li {
-    padding: 1.5em;
-    border-bottom: 1px solid #c7c7c7;
-    transition: all 200ms ease-in-out;
+  padding: 1.5em;
+  border-bottom: 1px solid #c7c7c7;
+  transition: all 200ms ease-in-out;
 }
 
 ul.dxucFileList li:hover {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 ul.dxucFileList li:last-child {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 
 ul.dxucFileList li .dxucButton a {
-    text-decoration: none;
-    color: #dd2121;
-    border: 1px solid #dd2121;
-    padding: 0.5em 1.5em;
-    transition: all 200ms ease-in-out;
+  text-decoration: none;
+  color: #dd2121;
+  border: 1px solid #dd2121;
+  padding: 0.5em 1.5em;
+  transition: all 200ms ease-in-out;
 }
 
 ul.dxucFileList li .dxucButton a:hover {
-    background-color: #dd2121;
-    color: #fff;
+  background-color: #dd2121;
+  color: #fff;
 }
 
 .FileUpload {
-    margin: 0;
-    padding: 0;
-    border: none;
-    box-shadow: none !important;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none !important;
 }
 
 .page-main .dxucControl .dxucBrowseButton {
-    box-shadow: none;
-    background-color: #00883a;
-    border-color: #00883a;
-    color: #fff;
-    padding: 1.75em 2.5em;
-    margin: 0;
-    border-radius: 0;
+  box-shadow: none;
+  background-color: #00883a;
+  border-color: #00883a;
+  color: #fff;
+  padding: 1.75em 2.5em;
+  margin: 0;
+  border-radius: 0;
 }
 
 .page-main .dxucControl .dxucBrowseButton a {
-    color: inherit;
+  color: inherit;
 }
 
 .page-main .dxucControl .dxucBrowseButtonHover,
 .page-main .dxucControl .dxucBrowseButton:hover {
-    background-color: #fff;
-    color: #00883a;
+  background-color: #fff;
+  color: #00883a;
 }
 
 .page-main .dxucControl .dxucBrowseButtonHover a {
-    background-color: #fff;
-    color: #00883a !important;
+  background-color: #fff;
+  color: #00883a !important;
 }
 
 .page-main .dxucTextBox {
-    padding: 1.5em;
+  padding: 1.5em;
 }
 
 .page-main .dxucTextBox .dxucEditArea {
-    font-size: 12pt;
+  font-size: 12pt;
 }
 
 /* hide "select a file to print" */
 .page-main #ContentPlaceHolder1_UpdatePanel1 > table > tbody > tr:nth-child(1) {
-    display: none;
+  display: none;
 }
 
 /* file upload and print button */
 .page-main #ContentPlaceHolder1_UpdatePanel1 > table > tbody > tr:nth-child(2) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.page-main #ContentPlaceHolder1_UpdatePanel1 > table > tbody > tr:nth-child(2) > td {
-    width: 100% !important;
+.page-main
+  #ContentPlaceHolder1_UpdatePanel1
+  > table
+  > tbody
+  > tr:nth-child(2)
+  > td {
+  width: 100% !important;
 }
 
 .page-main #btnFileUpload {
-    margin: 1em 0;
-    padding: 1.5rem 8.5rem;
-    font-size: 14pt;
-    transition: all 200ms ease-in-out;
-    background-color: #00883a;
-    border-color: #00883a;
-    box-shadow: none;
-    color: #fff;
+  margin: 1em 0;
+  padding: 1.5rem 8.5rem;
+  font-size: 14pt;
+  transition: all 200ms ease-in-out;
+  background-color: #00883a;
+  border-color: #00883a;
+  box-shadow: none;
+  color: #fff;
 }
 
 .page-main #btnFileUpload:hover {
-    background-color: #fff;
-    color: #00883a;
+  background-color: #fff;
+  color: #00883a;
 }
 
 .page-main .PrintSettingsContainer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .page-main .PrintSettingsItemLeft {
-    display: initial;
-    min-width: auto;
-    border-right: 1px solid #d3d3d3;
+  display: initial;
+  min-width: auto;
+  border-right: 1px solid #d3d3d3;
 }
 
 /* Page: Login.aspx */
@@ -392,64 +420,134 @@ ul.dxucFileList li .dxucButton a:hover {
 
 /* Page: UpdateCardNumber.aspx */
 
-.page-updatecardnumber #form1 > div.page.pageborder > div.main > table:nth-child(3) > tbody > tr:nth-child(2) {
+.page-updatecardnumber
+  #form1
+  > div.page.pageborder
+  > div.main
+  > table:nth-child(3)
+  > tbody
+  > tr:nth-child(2) {
   display: flex;
   flex-direction: column;
 }
 
-.page-updatecardnumber #form1 > div.page.pageborder > div.main > table:nth-child(3) > tbody > tr:nth-child(2) td {
+.page-updatecardnumber
+  #form1
+  > div.page.pageborder
+  > div.main
+  > table:nth-child(3)
+  > tbody
+  > tr:nth-child(2)
+  td {
   text-align: left !important;
   width: auto !important;
   height: auto !important;
   display: flex;
 }
 
-.page-updatecardnumber #form1 > div.page.pageborder > div.main > table:nth-child(3) > tbody > tr:nth-child(2) td input {
+.page-updatecardnumber
+  #form1
+  > div.page.pageborder
+  > div.main
+  > table:nth-child(3)
+  > tbody
+  > tr:nth-child(2)
+  td
+  input {
   margin-left: 0;
 }
 
-.page-updatecardnumber #form1 > div.page.pageborder > div.main > table:nth-child(3) > tbody > tr:nth-child(2) td .ShadowButtonCenter {
+.page-updatecardnumber
+  #form1
+  > div.page.pageborder
+  > div.main
+  > table:nth-child(3)
+  > tbody
+  > tr:nth-child(2)
+  td
+  .ShadowButtonCenter {
   padding: 1.5em 3.5em;
 }
 
 /* Page: ChangePrintingPreferences.aspx */
 
-.page-changeprintingpreferences #form1 > div.page.pageborder > div.main > table:nth-child(2) > tbody > tr:nth-child(2) > td.Top_left,
-.page-changeprintingpreferences #form1 > div.page.pageborder > div.main > table:nth-child(2) > tbody > tr:nth-child(3) > td.Top_left,
-.page-changeprintingpreferences #form1 > div.page.pageborder > div.main > table:nth-child(2) > tbody > tr:nth-child(4) > td.Top_left {
+.page-changeprintingpreferences
+  #form1
+  > div.page.pageborder
+  > div.main
+  > table:nth-child(2)
+  > tbody
+  > tr:nth-child(2)
+  > td.Top_left,
+.page-changeprintingpreferences
+  #form1
+  > div.page.pageborder
+  > div.main
+  > table:nth-child(2)
+  > tbody
+  > tr:nth-child(3)
+  > td.Top_left,
+.page-changeprintingpreferences
+  #form1
+  > div.page.pageborder
+  > div.main
+  > table:nth-child(2)
+  > tbody
+  > tr:nth-child(4)
+  > td.Top_left {
   display: none;
 }
 
-.page-changeprintingpreferences #form1 > div.page.pageborder > div.main > table:nth-child(2) > tbody > tr:nth-child(5) > td {
+.page-changeprintingpreferences
+  #form1
+  > div.page.pageborder
+  > div.main
+  > table:nth-child(2)
+  > tbody
+  > tr:nth-child(5)
+  > td {
   text-align: left !important;
 }
 
 @media only screen and (max-width: 1024px) {
-    .page_outerbox {
-        width: 95vw;
-        padding-left: 1em;
-    }
-    .page .main {
-        padding: 0;
-        margin: 0;
-        border: 0;
-    }
-    #hinweiseKostenWrapper {
-        width: 95vw;
-        flex-wrap: wrap; 
-    }
-    #hinweise {
-        border-right: 0;
-        border-bottom: 2px solid #d3d3d3;
-        padding-bottom: 3em;
-    }
-    #mensaKarteWrapper {
-        margin-left: 5vw;
-    }
-    .page-main .PrintSettingsItemLeft {
-        width: 100%;
-        border-bottom: 1px solid #d3d3d3;
-        border-right: 0;
-        margin-right: 1em;
-    }
+  .page_outerbox {
+    width: 95vw;
+    padding-left: 1em;
+  }
+  .page .main {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  #hinweiseKostenWrapper {
+    width: 95vw;
+    flex-wrap: wrap;
+  }
+  #hinweise {
+    border-right: 0;
+    border-bottom: 2px solid #d3d3d3;
+    padding-bottom: 3em;
+  }
+  #mensaKarteWrapper {
+    margin-left: 5vw;
+  }
+  .page-main .PrintSettingsItemLeft {
+    width: 100%;
+    border-bottom: 1px solid #d3d3d3;
+    border-right: 0;
+    margin-right: 1em;
+  }
+
+  #mainNavigation {
+    display: none;
+  }
+
+  #aboveContentWrapper {
+    display: block;
+    margin-top: 3em;
+  }
+
+  .page_outerbox {
+    margin-top: 1em;
+  }
 }

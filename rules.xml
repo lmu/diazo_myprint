@@ -28,8 +28,5 @@
     <replace css:theme-children="#r-main" css:content-children="body" />
 
     <drop css:theme-children=".header__navigation-wrapper" />
-    
-    <drop css:theme="#stacknav" />
-    <drop css:theme="#mobilenav" />
 
 </rules>
