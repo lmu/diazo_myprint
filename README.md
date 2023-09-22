@@ -73,6 +73,22 @@ This will mount the current folder in the container, replacing the application a
 
 The Diazo theme will also re-build itself on each request so any changes to `rules.xml` or other theme files will be instatly visible, at the cost of response time.
 
+### Custom domain and SSL
+
+The Docker orchestration includes a `frontend` service which uses the official `nginx` docker image to proxy the theming service as a specific domain, with optional SSL support. 
+
+By default the service will start with SSL disabled and bind itself to port `80` on the host. Edit the `NGINX_HOST` environment variable in `docker-compose.yaml` in order to set the server name (e.g. `NGINX_HOST=www.printservice.uni-muenchen.de`).
+
+In order to enable SSL you need to:
+* add your certificate and key to the `./nginx/certs/` folder
+* uncomment `443` in the `docker-compose`:
+    ```yaml
+    frontend:
+        ports:
+        - 80:80
+        - 443:443
+    ```
+* edit `./nginx/templates/default.conf.template` to uncomment the SSL `server` sections, and comment the first http-only section. Modify `ssl_certificate` and `ssl_certificate_key` as appropriate.
 ## Theme logic
 
 The theme is based off the https://www.lmu.de/de/index.html theme, parts of it have been copied as `./theme/assets/` and `theme.html`.

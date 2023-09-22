@@ -1,0 +1,36 @@
+server {
+    listen 80 default_server;
+
+    server_name _;
+
+    location / {
+        proxy_pass http://app:5000/;
+    }
+}
+
+# For SSL uncomment the server sections below and comment 
+# the server section above.
+# Make sure certificates are available and mounted via a volume.
+
+# server {
+#     listen 80 default_server;
+
+#     server_name _;
+
+#     return 301 https://$host$request_uri;
+# }
+
+# server {
+#     listen 443 ssl;
+#     # use the certificates
+#     ssl_certificate     /etc/nginx/certs/certificate.crt;
+#     ssl_certificate_key /etc/nginx/certs/certificate.key;
+#     server_name ${NGINX_HOST};
+#     root /var/www/html;
+#     index index.php index.html index.htm;
+
+#     location / {
+#         proxy_pass http://app:5000/;
+#     }
+
+# }

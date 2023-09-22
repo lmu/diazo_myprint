@@ -34,3 +34,10 @@ pip-delete-this-directory.txt
 venv/
 
 .vscode/
+
+*.pem
+*.key
+*.crt
+*.cer
+*.der
+*.priv

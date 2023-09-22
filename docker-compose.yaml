@@ -12,3 +12,15 @@ services:
     #   - .:/var/local/theme
     ports:
      - 5000:5000
+
+  frontend:
+    image: nginx:1.25-alpine
+    volumes:
+      - ./nginx/templates:/etc/nginx/templates
+      - ./nginx/certs/:/etc/nginx/certs
+    environment:
+      - NGINX_HOST=themetest.local
+    ports:
+      - 80:80
+      # - 443:443
+  
