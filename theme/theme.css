@@ -219,6 +219,32 @@ input[type="password"]:focus {
 
 /* Page: Main.aspx */
 
+.page-main .PrintOptionsSelector.PopUpEditor {
+  height: auto;
+  width: auto;
+  margin-top: 3em;
+  margin-left: auto;
+  transform: translate(-50%,-50%);
+  z-index: 1000;
+}
+
+.page-main .PrintOptionsSelector.PopUpEditor .ShadowCheckbox label,
+.page-main .PrintOptionsSelector.PopUpEditor select,
+.page-main .PrintOptionsSelector.PopUpEditor input[type="number"] {
+  box-shadow: none;
+  border: 1px solid #bebebe;
+  padding: 0.5em;
+}
+
+.page-main .PrintOptionsSelector.PopUpEditor input[type="number"] {
+  width: auto !important;
+}
+
+.page-main .PrintOptionsSelector.PopUpEditor select {
+  background-image: none;
+  appearance: auto;
+}
+
 .page-main #form1 > div.page.pageborder > div.main > table:nth-child(4) tr {
   display: flex;
   justify-content: space-around;
@@ -367,7 +393,7 @@ ul.dxucFileList li .dxucButton a:hover {
   justify-content: space-between;
 }
 
-.page-main .PrintSettingsItemLeft {
+.page-main .PrintSettingsContainer .PrintSettingsItemLeft {
   display: initial;
   min-width: auto;
   border-right: 1px solid #d3d3d3;
@@ -531,7 +557,7 @@ ul.dxucFileList li .dxucButton a:hover {
   #mensaKarteWrapper {
     margin-left: 5vw;
   }
-  .page-main .PrintSettingsItemLeft {
+  .page-main .PrintSettingsContainer .PrintSettingsItemLeft {
     width: 100%;
     border-bottom: 1px solid #d3d3d3;
     border-right: 0;
