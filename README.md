@@ -85,7 +85,7 @@ Styling customisations are done in the `theme.css` file. The `theme.js` file con
 
 * Adding a class on the HTML `<body>` element in order to easily identify the current page via CSS: `page-{pagename}` (e.g. *page-login*, *page-clientprofile*).
 * Moving the language selector in the top navigation, while maintaining functionality: the `<select>` is replaced by an `<input type="hidden">` in the page form, which is kept in sync with the select that is now outside the form.
-* Moving the site actions ("Help", "Profile", etc.) in the theme header, while creating a clone of them, that is only visible on mobile.
+* Moving the site actions ("Help", "Profile", etc.) in the theme header, while creating a clone of them, that is only visible on mobile. As part of moving the site actions, a fix is also implemented for the "Logout" link, which prevents the redirect outside the theme domain.
 * Loading the "Hinweise", "Kosten" (`./theme/hinweise-kosten.html`) and "Mensakarte" (`./theme/mensa-karte.html`) sections. This is done via JS as inserting the content via `<replace href= />` rules breaks the encoding. The content could be included directly in the `./theme/theme.html` file, but having it in separate files may ease customisation.
 * Hiding of inactive error messages on the login page: the "invalid password" and "invalid identifier" messages are invisible but still occupy a lot of vertical space, this hides them when they are not shown.
 * Hiding of the install printer container on mobile, where the button is not rendered, but it's container occupies a lot of space.

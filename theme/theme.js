@@ -29,14 +29,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function moveActions() {
         var elActions = document.querySelectorAll(".HyperlinkAlignRight");
+
+        // Use fetch to call the logout link, granting immunity from the redirect.
+        // When the fetch completes, redirect to the root.
+        function fixLogout(evt) {
+            evt.preventDefault();
+            
+            let elHref = evt.target.getAttribute("href");
+            function redirectToRoot() { window.location.href = "/" };
+            fetch(elHref).then(redirectToRoot).catch(redirectToRoot);
+
+            return false;
+        }
+
         if (elActions.length) {
-            [].slice.call(elActions).forEach(function (el) {
+            for (let i = elActions.length - 1; i >= 0; i--) {
+                let el = elActions[i];
+                let elID = el.getAttribute("id");
+                el.setAttribute("data-id", elID);
+                // Removing id as we will be cloning these elements.
                 el.removeAttribute("id");
+                // Fix logout link. 
+                // The log-out redirects to the original proxied domain, 
+                // which directs the user outside the theme.
+                if (elID.toLowerCase().indexOf("logout") != -1) {
+                    el.addEventListener("click", fixLogout);
+                }
                 elLi = document.createElement("li");
                 elLi.appendChild(el);
                 elNavigation.appendChild(elLi);
                 elAboveContentNavigation.appendChild(elLi.cloneNode(true));
-            });
+            }
         }
     }
 
