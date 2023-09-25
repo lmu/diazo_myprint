@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var elLanguageSelector = elTopPanel ? elTopPanel.querySelector("select") : null;
 
+    var CURRENT_LANGUAGE = "";
+
 
     function moveLanguageSelector() {
         var hiddenLanguageSelector = document.createElement("input");
@@ -34,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // When the fetch completes, redirect to the root.
         function fixLogout(evt) {
             evt.preventDefault();
-            
+
             let elHref = evt.target.getAttribute("href");
             function redirectToRoot() { window.location.href = "/" };
             fetch(elHref).then(redirectToRoot).catch(redirectToRoot);
@@ -65,6 +67,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function _loadRemoteContent(url) {
         let response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(response.status, {cause: response})
+        }
         let content = await response.text();
         let wrapper = document.createElement("div");
         wrapper.innerHTML = content;
@@ -82,19 +87,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+    async function _tryLoadRemoteIntoContainer(url, container, method, fallbackUrl) {
+        try {
+            await _loadRemoteIntoContainer(
+                url,
+                container,
+                method,
+            );
+        } 
+        catch {
+            _loadRemoteIntoContainer(
+                fallbackUrl,
+                container,
+                method,
+            );
+        }
+
+    }
+
     async function loadMensaKarteContent() {
-        _loadRemoteIntoContainer(
-            "/static/mensa-karte.html",
+        _tryLoadRemoteIntoContainer(
+            `/static/templates/${CURRENT_LANGUAGE}/mensa-karte.html`,
             document.getElementById("mensaKartePlaceholder"),
             "replace",
+            "/static/templates/en/mensa-karte.html",
         );
     }
 
     async function loadHinweiseKostenContent() {
-        _loadRemoteIntoContainer(
-            "/static/hinweise-kosten.html",
+        _tryLoadRemoteIntoContainer(
+            `/static/templates/${CURRENT_LANGUAGE}/hinweise-kosten.html`,
             document.getElementById("hinweiseKostenPlaceholder"),
             "replace",
+            "/static/templates/en/hinweise-kosten.html",
         );
     }
 
@@ -134,8 +159,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function setCurrentLanguage() {
+        CURRENT_LANGUAGE = elLanguageSelector.value.split("-")[0];
+    }
+
     function init() {
         addBodyPageClass();
+        setCurrentLanguage();
         if (elLanguageSelector) {
             moveLanguageSelector();
         };

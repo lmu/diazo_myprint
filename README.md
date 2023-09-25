@@ -4,7 +4,7 @@
 ## Package structure
 
 * **theme/** - contains the HTML theme and its assets
-*** theme_helpers/** - custom python package used in the configuration file in order to override the built-in Paster#proxy service.
+* **theme_helpers/** - custom python package used in the configuration file in order to override the built-in Paster#proxy service.
 * **diazo.ini** - main configuration
 * **rules.xml** - theming rules
 * **docker-compose.yaml** - Docker orchestration file
@@ -60,6 +60,8 @@ docker compose up -d
 ```
 
 The application will be available on port `5000` by default, this can be changed by editing the docker-compose.yaml file and updating the `ports` section (e.g. `8080:5000` to have it run on host port `8080`).
+
+The proxy address can be specified either in `diazo.ini` or via the `APP_PROXY_ADDR` environment variable in `docker-compose.yaml`, if both are given, the `diazo.ini` value takes precedence.
 
 ## Docker Development
 

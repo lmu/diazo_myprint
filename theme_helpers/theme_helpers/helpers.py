@@ -1,3 +1,4 @@
+import os
 import paste.proxy as proxy
 
 
@@ -23,7 +24,7 @@ class NoCSPProxy(proxy.Proxy):
 
 def make_proxy_helper(
     _,
-    address,
+    address="",
     allowed_request_methods="",
     suppress_http_headers="",
     suppress_http_response_headers="",
@@ -31,6 +32,13 @@ def make_proxy_helper(
     allowed_request_methods = proxy.aslist(allowed_request_methods)
     suppress_http_headers = proxy.aslist(suppress_http_headers)
     suppress_http_response_headers = proxy.aslist(suppress_http_response_headers)
+    
+    if not address:
+        address = os.environ.get("APP_PROXY_ADDR", "")
+
+    if not address:
+        raise ValueError("address or APP_PROXY_ADDR is required.")
+
     return NoCSPProxy(
         address,
         allowed_request_methods=allowed_request_methods,

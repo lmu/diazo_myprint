@@ -10,6 +10,8 @@ services:
     # command: ["serve", "--reload", "diazo.ini"]
     # volumes:
     #   - .:/var/local/theme
+    environment:
+      - APP_PROXY_ADDR=https://upload.printservice.uni-muenchen.de/
     ports:
      - 5000:5000
 
