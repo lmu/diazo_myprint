@@ -4,7 +4,7 @@ services:
   app:
     build:
       context: .
-    # For development/debugging, uncomment 
+    # For development/debugging, uncomment
     # the command and volumes sections below,
     # then (re)run: "docker-compose up -d"
     # command: ["serve", "--reload", "diazo.ini"]
@@ -23,6 +23,5 @@ services:
     environment:
       - NGINX_HOST=themetest.local
     ports:
-      - 80:80
-      # - 443:443
-  
+      - 18080:80
+      - 18443:443
