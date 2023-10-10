@@ -224,7 +224,7 @@ input[type="password"]:focus {
   width: auto;
   margin-top: 3em;
   margin-left: auto;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 1000;
 }
 
@@ -245,21 +245,18 @@ input[type="password"]:focus {
   appearance: auto;
 }
 
-.page-main #form1 > div.page.pageborder > div.main > table:nth-child(4) tr {
+.page-main #form1>div.page.pageborder>div.main>table:nth-child(4) tr {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
 }
-.page-main
-  #form1
-  > div.page.pageborder
-  > div.main
-  > table:nth-child(4)
-  td:last-child {
+
+.page-main #form1>div.page.pageborder>div.main>table:nth-child(4) td:last-child {
   display: none;
 }
-.page-main #form1 > div.page.pageborder > div.main > table:nth-child(4) td {
+
+.page-main #form1>div.page.pageborder>div.main>table:nth-child(4) td {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -351,23 +348,18 @@ ul.dxucFileList li .dxucButton a:hover {
 }
 
 /* hide "select a file to print" */
-.page-main #ContentPlaceHolder1_UpdatePanel1 > table > tbody > tr:nth-child(1) {
+.page-main #ContentPlaceHolder1_UpdatePanel1>table>tbody>tr:nth-child(1) {
   display: none;
 }
 
 /* file upload and print button */
-.page-main #ContentPlaceHolder1_UpdatePanel1 > table > tbody > tr:nth-child(2) {
+.page-main #ContentPlaceHolder1_UpdatePanel1>table>tbody>tr:nth-child(2) {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.page-main
-  #ContentPlaceHolder1_UpdatePanel1
-  > table
-  > tbody
-  > tr:nth-child(2)
-  > td {
+.page-main #ContentPlaceHolder1_UpdatePanel1>table>tbody>tr:nth-child(2)>td {
   width: 100% !important;
 }
 
@@ -402,136 +394,49 @@ ul.dxucFileList li .dxucButton a:hover {
 /* Page: Login.aspx */
 
 /* top table rows */
-.page-login
-  #form1
-  > div.page.pageborder
-  > div.main
-  > table:nth-child(3)
-  > tbody
-  > tr:nth-child(1),
-.page-login
-  #form1
-  > div.page.pageborder
-  > div.main
-  > table:nth-child(3)
-  > tbody
-  > tr:nth-child(2),
-.page-login
-  #form1
-  > div.page.pageborder
-  > div.main
-  > table:nth-child(3)
-  > tbody
-  > tr:nth-child(3) {
+.page-login #form1>div.page.pageborder>div.main>table:nth-child(3)>tbody>tr:nth-child(1),
+.page-login #form1>div.page.pageborder>div.main>table:nth-child(3)>tbody>tr:nth-child(2),
+.page-login #form1>div.page.pageborder>div.main>table:nth-child(3)>tbody>tr:nth-child(3) {
   display: none;
 }
 
 /* bottom table rows */
-.page-login
-  #form1
-  > div.page.pageborder
-  > div.main
-  > table:nth-child(3)
-  > tbody
-  > tr:nth-child(6),
-.page-login
-  #form1
-  > div.page.pageborder
-  > div.main
-  > table:nth-child(3)
-  > tbody
-  > tr:nth-child(7) {
+.page-login #form1>div.page.pageborder>div.main>table:nth-child(3)>tbody>tr:nth-child(6),
+.page-login #form1>div.page.pageborder>div.main>table:nth-child(3)>tbody>tr:nth-child(7) {
   display: none;
 }
 
 /* Page: UpdateCardNumber.aspx */
 
-.page-updatecardnumber
-  #form1
-  > div.page.pageborder
-  > div.main
-  > table:nth-child(3)
-  > tbody
-  > tr:nth-child(2) {
+.page-updatecardnumber #form1>div.page.pageborder>div.main>table:nth-child(3)>tbody>tr:nth-child(2) {
   display: flex;
   flex-direction: column;
 }
 
-.page-updatecardnumber
-  #form1
-  > div.page.pageborder
-  > div.main
-  > table:nth-child(3)
-  > tbody
-  > tr:nth-child(2)
-  td {
+.page-updatecardnumber #form1>div.page.pageborder>div.main>table:nth-child(3)>tbody>tr:nth-child(2) td {
   text-align: left !important;
   width: auto !important;
   height: auto !important;
   display: flex;
 }
 
-.page-updatecardnumber
-  #form1
-  > div.page.pageborder
-  > div.main
-  > table:nth-child(3)
-  > tbody
-  > tr:nth-child(2)
-  td
-  input {
+.page-updatecardnumber #form1>div.page.pageborder>div.main>table:nth-child(3)>tbody>tr:nth-child(2) td input {
   margin-left: 0;
 }
 
-.page-updatecardnumber
-  #form1
-  > div.page.pageborder
-  > div.main
-  > table:nth-child(3)
-  > tbody
-  > tr:nth-child(2)
-  td
-  .ShadowButtonCenter {
+.page-updatecardnumber #form1>div.page.pageborder>div.main>table:nth-child(3)>tbody>tr:nth-child(2) td .ShadowButtonCenter {
   padding: 1.5em 3.5em;
 }
 
 /* Page: ChangePrintingPreferences.aspx */
 
-.page-changeprintingpreferences
-  #form1
-  > div.page.pageborder
-  > div.main
-  > table:nth-child(2)
-  > tbody
-  > tr:nth-child(2)
-  > td.Top_left,
-.page-changeprintingpreferences
-  #form1
-  > div.page.pageborder
-  > div.main
-  > table:nth-child(2)
-  > tbody
-  > tr:nth-child(3)
-  > td.Top_left,
-.page-changeprintingpreferences
-  #form1
-  > div.page.pageborder
-  > div.main
-  > table:nth-child(2)
-  > tbody
-  > tr:nth-child(4)
-  > td.Top_left {
+.page-changeprintingpreferences #form1>div.page.pageborder>div.main>table:nth-child(2)>tbody>tr:nth-child(2)>td.Top_left,
+.page-changeprintingpreferences #form1>div.page.pageborder>div.main>table:nth-child(2)>tbody>tr:nth-child(3)>td.Top_left,
+.page-changeprintingpreferences #form1>div.page.pageborder>div.main>table:nth-child(2)>tbody>tr:nth-child(4)>td.Top_left {
   display: none;
 }
 
-.page-changeprintingpreferences
-  #form1
-  > div.page.pageborder
-  > div.main
-  > table:nth-child(2)
-  > tbody
-  > tr:nth-child(5)
-  > td {
+.page-changeprintingpreferences #form1>div.page.pageborder>div.main>table:nth-child(2)>tbody>tr:nth-child(5)>td {
   text-align: left !important;
 }
 
@@ -540,23 +445,28 @@ ul.dxucFileList li .dxucButton a:hover {
     width: 95vw;
     padding-left: 1em;
   }
+
   .page .main {
     padding: 0;
     margin: 0;
     border: 0;
   }
+
   #hinweiseKostenWrapper {
     width: 95vw;
     flex-wrap: wrap;
   }
+
   #hinweise {
     border-right: 0;
     border-bottom: 2px solid #d3d3d3;
     padding-bottom: 3em;
   }
+
   #mensaKarteWrapper {
     margin-left: 5vw;
   }
+
   .page-main .PrintSettingsContainer .PrintSettingsItemLeft {
     width: 100%;
     border-bottom: 1px solid #d3d3d3;
@@ -576,4 +486,35 @@ ul.dxucFileList li .dxucButton a:hover {
   .page_outerbox {
     margin-top: 1em;
   }
+}
+
+
+#belowContentContainer h3 {
+  font-size: 120%;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#belowContentContainer p {
+  margin-bottom: 1rem;
+}
+
+#belowContentContainer strong {
+  font-weight: bold;
+}
+
+
+#belowContentContainer a {
+  font-size: 100%;
+}
+
+#belowContentContainer ul,
+#belowContentContainer ol {
+  list-style: circle;
+  list-style-position: inside;
+}
+
+
+a {
+  color: #00883a !important;
 }
