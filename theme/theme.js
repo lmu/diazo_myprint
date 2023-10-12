@@ -123,9 +123,19 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     }
 
+    async function loadFooterLinks() {
+        _tryLoadRemoteIntoContainer(
+            `/static/templates/${CURRENT_LANGUAGE}/footer-links.html`,
+            document.getElementById("footerLinks"),
+            "replace",
+            "/static/templates/en/footer-links.html",
+        );
+    }
+
     function loadRemoteContent() {
         loadHinweiseKostenContent();
         loadMensaKarteContent();
+        loadFooterLinks();
     }
 
     function addBodyPageClass() {
