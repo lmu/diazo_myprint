@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="de">
+<meta charset="UTF-8">
+<title>Printservice - Redirect Info</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+    :root {
+        --primary: #00883A;
+        --almost-black: #343a40;
+        --almost-white: #F8F9FA;
+
+        color: var(--almost-black);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5vh;
+        padding: 0 10vw 0 10vw;
+    }
+
+    address {
+        display: inline-block;
+        margin-right: 4vw;
+        font-style: normal;
+    }
+
+    footer {
+        margin-top: 5vh;
+        padding: 4vh 10vw 2vh 10vw;
+        background-color: #232323;
+        color: var(--almost-white);
+    }
+
+    hr {
+        border: 1px solid #E6E6E7;
+        margin: 4rem 0;
+    }
+
+    .jumbotron {
+        background-color: #E6E6E7;
+        padding: 8vh 10vw;
+
+        > h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        > p {
+            font-size: 1.5rem;
+        }
+    }
+
+    .container {
+        padding: 4vh 10vw;
+
+        > h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        > p {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .legal {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2vh;
+        justify-content: space-between;
+        align-items: center"
+    }
+
+    a.link {
+        font-weight: bold;
+        text-decoration: none;
+        color: var(--primary);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    a.nav-link {
+        display: inline-block;
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-top: 2vh;
+        text-decoration: none;
+        color: var(--almost-black);
+
+        &:hover {
+            color: var(--primary);
+        }
+    }
+
+    a.footer-link {
+        color: var(--almost-white);
+        text-decoration: none;
+        margin-right: 1vw;
+        /* TODO: do not wrap does not work */
+        white-space: nowrap;
+
+        &:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 0.2rem;
+            text-underline-offset: 0.4rem;
+        }
+    }
+
+    /* Make header/footer responsive*/
+    @media (max-width: 600px) {
+        header {
+            flex-direction: column !important;
+            align-items: normal !important;
+        }
+
+        .contact {
+            flex-direction: column !important;
+            align-items: normal !important;
+
+            > address {
+                margin-bottom: 2vh;
+            }
+        }
+
+        .legal {
+            flex-direction: column !important;
+            align-items: normal !important;
+            margin-top: 4vh !important;
+
+            :first-child {
+                margin-bottom: 1vh;
+            }
+        }
+    }
+</style>
+<body style="display: flex; flex-direction: column; min-height: 100vh; max-width: 2000px; margin: auto">
+<header>
+    <div style="margin-right: 4vw">
+        <img src="https://cms-cdn.lmu.de/assets/img/Logo_LMU.svg" alt="LMU Logo" height=100/>
+    </div>
+    <nav>
+        <a href="https://www.lmu.de" class="nav-link" style="margin-right: 4vw">
+            LMU Startseite
+        </a>
+        <a href="https://upload.printservice.uni-muenchen.de/" class="nav-link">
+            Neuer Printservice
+        </a>
+
+    </nav>
+</header>
+<main style="flex-grow: 1">
+    <div class="jumbotron">
+        <h1>Printservice</h1>
+        <p>
+            Seite umgezogen / Page moved
+        </p>
+    </div>
+    <section class="container">
+        <h2>Weitere Informationen</h2>
+        <p>
+            Im Rahmen der Umstellung auf die neue Version des Printservices wurde der Service auf einen neuen Server
+            umgezogen. Sie finden den Service ab sofort unter <a class="link"
+                                                                 href="https://upload.printservice.uni-muenchen.de/">upload.printservice.uni-muenchen.de</a>.
+            Bitte aktualisieren Sie gegebenenfalls Ihre Lesezeichen.
+        </p>
+        <hr/>
+        <h2>Further Information</h2>
+        <p>
+            The Printservice was moved to a new server as part of the update to the new version of the Printservice.
+            You can now find the service at <a class="link" href="https://upload.printservice.uni-muenchen.de/">upload.printservice.uni-muenchen.de</a>.
+            Please update your bookmarks if necessary.
+        </p>
+    </section>
+</main>
+<footer>
+    <!--    TODO: image, black -->
+    <span style="font-weight: bold; font-size: 1.5rem; margin-bottom: 1rem; display: block; color: #E6E6E7">
+            Ludwig-Maximilians-Universität München
+    </span>
+    <div class="contact">
+        <address>
+            Geschwister-Scholl-Platz 1
+            <br/>
+            80539 München
+        </address>
+        <div>
+            Telefon: +49 89 2180-0
+            <br/>
+            Fax: +49 89 2180-2322
+        </div>
+    </div>
+    <div class="legal">
+        <div>
+            <a href="https://www.lmu.de/de/footer/datenschutz/index.html" class="footer-link">Datenschutz</a>
+            <a href="https://www.lmu.de/de/footer/impressum/index.html" class="footer-link">Impressum</a>
+            <a href="https://www.lmu.de/de/footer/barrierefreiheit/index.html" class="footer-link">Barrierefreiheit</a>
+        </div>
+        <span>LMU München © 2023</span>
+    </div>
+</footer>
+</body>
+</html>
