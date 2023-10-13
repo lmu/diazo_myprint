@@ -348,9 +348,11 @@ ul.dxucFileList li .dxucButton a:hover {
 }
 
 /* hide "select a file to print" */
+/*
 .page-main #ContentPlaceHolder1_UpdatePanel1>table>tbody>tr:nth-child(1) {
   display: none;
 }
+*/
 
 /* file upload and print button */
 .page-main #ContentPlaceHolder1_UpdatePanel1>table>tbody>tr:nth-child(2) {
