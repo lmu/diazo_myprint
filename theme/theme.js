@@ -171,6 +171,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function setCurrentLanguage() {
         CURRENT_LANGUAGE = elLanguageSelector.value.split("-")[0];
+        document.documentElement.setAttribute("lang", CURRENT_LANGUAGE);
+        document.documentElement.setAttribute("xml:lang", CURRENT_LANGUAGE);
     }
 
     function init() {

@@ -10,4 +10,8 @@ setup(
     packages=find_packages(),
     # package_dir={"": "src"},
     install_requires=[],
+    entry_points="""
+        [paste.filter_app_factory]
+        diazo_helper = theme_helpers.diazo_helper:HelperDiazoMiddleware
+        """,
 )

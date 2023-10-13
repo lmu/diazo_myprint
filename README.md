@@ -4,7 +4,7 @@
 ## Package structure
 
 * **theme/** - contains the HTML theme and its assets
-* **theme_helpers/** - custom python package used in the configuration file in order to override the built-in Paster#proxy service.
+* **theme_helpers/** - custom python package used in the configuration file in order to override the built-in Paster#proxy service and to wrap the Diazo middleware in order to skip POST requests.
 * **diazo.ini** - main configuration
 * **rules.xml** - theming rules
 * **docker-compose.yaml** - Docker orchestration file

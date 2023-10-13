@@ -325,7 +325,7 @@ ul.dxucFileList li .dxucButton a:hover {
 }
 
 .page-main .dxucControl .dxucBrowseButton a {
-  color: inherit;
+  color: inherit !important;
 }
 
 .page-main .dxucControl .dxucBrowseButtonHover,
