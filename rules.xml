@@ -22,9 +22,9 @@
     <drop css:content="img.Top_left" />
 
     <replace css:content="#imgCompanyLogo">
-        <h2>Cloud printing</h2>
+        <h2>LMU-Printservice - Cloud Printing</h2>
     </replace>
 
     <replace css:theme-children="#r-main" css:content-children="body" />
-    
+
 </rules>
