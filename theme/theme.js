@@ -51,8 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 el.setAttribute("data-id", elID);
                 // Removing id as we will be cloning these elements.
                 el.removeAttribute("id");
-                // Fix logout link. 
-                // The log-out redirects to the original proxied domain, 
+                // Fix logout link.
+                // The log-out redirects to the original proxied domain,
                 // which directs the user outside the theme.
                 if (elID.toLowerCase().indexOf("logout") != -1) {
                     el.addEventListener("click", fixLogout);
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 container,
                 method,
             );
-        } 
+        }
         catch {
             _loadRemoteIntoContainer(
                 fallbackUrl,
@@ -173,6 +173,8 @@ document.addEventListener("DOMContentLoaded", function () {
         CURRENT_LANGUAGE = elLanguageSelector.value.split("-")[0];
         document.documentElement.setAttribute("lang", CURRENT_LANGUAGE);
         document.documentElement.setAttribute("xml:lang", CURRENT_LANGUAGE);
+        let metaLang = document.getElementsByTagName("meta").language
+        metaLang.setAttribute("content", CURRENT_LANGUAGE);
     }
 
     function init() {
