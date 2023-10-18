@@ -10,6 +10,7 @@ services:
     # command: ["serve", "--reload", "diazo.ini"]
     # volumes:
     #   - .:/var/local/theme
+    restart: always
     environment:
       - APP_PROXY_ADDR=https://upload.printservice.uni-muenchen.de/
     ports:
@@ -17,6 +18,7 @@ services:
 
   frontend:
     image: nginx:1.25-alpine
+    restart: always
     volumes:
       - ./nginx/templates:/etc/nginx/templates
       - ./nginx/certs/:/etc/nginx/certs
