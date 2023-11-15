@@ -4,6 +4,25 @@
   background: rgb(0 100 0 / 0.1) !important;
 } */
 
+:root {
+  color-scheme: light only;
+}
+
+body {
+  filter: invert(0%) !important;
+  background-color: white !important;
+  background-image: none !important;
+}
+
+.header__logo {
+  filter: invert(0%) !important;
+  background-color: white !important;
+}
+
+img {
+  filter: invert(0%) !important;
+}
+
 main {
   background-color: white;
   color: #232323;

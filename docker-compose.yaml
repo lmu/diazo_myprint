@@ -13,8 +13,8 @@ services:
     restart: always
     environment:
       # - APP_PROXY_ADDR=https://upload.printservice.uni-muenchen.de/
-      # - APP_PROXY_ADDR=http://lmzvd06-eop01.srv.mwn.de/
-      - APP_PROXY_ADDR=http://host.docker.internal/
+      - APP_PROXY_ADDR=http://lmzvd06-eop01.srv.mwn.de/
+        # - APP_PROXY_ADDR=http://host.docker.internal/
     ports:
      - 5000:5000
 
@@ -27,5 +27,5 @@ services:
     environment:
       - NGINX_HOST=themetest.local
     ports:
-      - 18080:80
-      - 18443:443
+      - 80:80
+      - 443:443
