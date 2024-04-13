@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:slim
 
 ENV APP_HOME=/var/local/theme
 RUN mkdir -p $APP_HOME

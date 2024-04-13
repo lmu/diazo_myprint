@@ -1,0 +1,22 @@
+[ req ]
+
+
+string_mask         = utf8only
+prompt              = no
+
+
+[ subject ]
+countryName         = DE
+localityName        = Munich
+organisationName    = Ludwig-Maximilians-Universität München
+commonName          = upload.printservice.uni-muenchen.de
+emailAddress        =
+
+[ alternate_names ]
+DNS.1 = printservice.lmu.de
+DNS.1 = printservice.uni-muenchen.de
+DNS.1 = upload.printservice.lmu.de
+DNS.1 = LMZVD06-EOP01.srv.mwn.de:18443
+DNS.2 = LMZVD06-EOP01.srv.mwn.de
+DNS.3 = 10.163.98.19
+DNS.1 = 192.168.178.115
