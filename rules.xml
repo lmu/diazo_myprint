@@ -26,7 +26,7 @@
     </replace>
 
     <replace css:theme-children="#r-main" css:content-children="body" />
-    <strip css:content="#ContentPlaceHolder1_tdFreeTextAreaTop span" />
     <drop css:content="#ContentPlaceHolder1_tdFreeTextAreaTop" attributes="style" />
+    <drop css:content="#ContentPlaceHolder1_tdFreeTextAreaTop span" attributes="style" />
 
 </rules>
