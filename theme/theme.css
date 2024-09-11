@@ -436,6 +436,16 @@ ul.dxucFileList li .dxucButton a:hover {
   display: none;
 }
 
+#ContentPlaceHolder1_tdFreeTextAreaTop span {
+  border-radius: 5px;
+  border-color: #dd2121;
+  border-width: 2px;
+  border-style: solid;
+  background-color: rgb(248, 215, 218);
+  color: rgb(88, 21, 28);
+
+}
+
 /* Page: UpdateCardNumber.aspx */
 
 .page-updatecardnumber #form1>div.page.pageborder>div.main>table:nth-child(3)>tbody>tr:nth-child(2) {
