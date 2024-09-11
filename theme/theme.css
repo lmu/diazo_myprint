@@ -416,11 +416,19 @@ ul.dxucFileList li .dxucButton a:hover {
 /* Page: Login.aspx */
 
 /* top table rows */
-.page-login #form1>div.page.pageborder>div.main>table:nth-child(3)>tbody>tr:nth-child(1),
-.page-login #form1>div.page.pageborder>div.main>table:nth-child(3)>tbody>tr:nth-child(2),
+.page-login #form1>div.page.pageborder>div.main>table:nth-child(3)>tbody>tr:nth-child(1) {
+  display: none;
+}
+
+.page-login #form1>div.page.pageborder>div.main>table:nth-child(3)>tbody>tr:nth-child(2) {
+  display: none;
+}
+
+/*
 .page-login #form1>div.page.pageborder>div.main>table:nth-child(3)>tbody>tr:nth-child(3) {
   display: none;
 }
+*/
 
 /* bottom table rows */
 .page-login #form1>div.page.pageborder>div.main>table:nth-child(3)>tbody>tr:nth-child(6),
