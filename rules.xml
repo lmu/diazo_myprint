@@ -28,6 +28,5 @@
     <replace css:theme-children="#r-main" css:content-children="body" />
     <drop css:content="#ContentPlaceHolder1_tdFreeTextAreaTop" attributes="style" />
     <drop css:content="#ContentPlaceHolder1_tdFreeTextAreaTop span" attributes="style" />
-    <drop css:content="*" attributes="style" />
 
 </rules>
