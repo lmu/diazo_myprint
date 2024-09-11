@@ -1,6 +1,5 @@
 # Diazo theme for printing service
 
-
 ## Package structure
 
 * **theme/** - contains the HTML theme and its assets
@@ -34,7 +33,6 @@ Install requirements
 ./venv/bin/pip install -r requirements.txt
 ```
 
-
 Run the application
 
 ```shell
@@ -65,19 +63,19 @@ The proxy address can be specified either in `diazo.ini` or via the `APP_PROXY_A
 
 ## Docker Development
 
-After following the steps in "Docker Setup", uncomment the sections `command` and `volumes` in `docker-compose.yaml`, edit `diazo.ini` and set `debug = false` in the `[filter:theme]` section then run 
+After following the steps in "Docker Setup", uncomment the sections `command` and `volumes` in `docker-compose.yaml`, edit `diazo.ini` and set `debug = false` in the `[filter:theme]` section then run
 
 ```shell
 docker compose up -d
 ```
 
-This will mount the current folder in the container, replacing the application and any code/configuration changes will cause a reload. 
+This will mount the current folder in the container, replacing the application and any code/configuration changes will cause a reload.
 
 The Diazo theme will also re-build itself on each request so any changes to `rules.xml` or other theme files will be instatly visible, at the cost of response time.
 
 ### Custom domain and SSL
 
-The Docker orchestration includes a `frontend` service which uses the official `nginx` docker image to proxy the theming service as a specific domain, with optional SSL support. 
+The Docker orchestration includes a `frontend` service which uses the official `nginx` docker image to proxy the theming service as a specific domain, with optional SSL support.
 
 By default the service will start with SSL disabled and bind itself to port `80` on the host. Edit the `NGINX_HOST` environment variable in `docker-compose.yaml` in order to set the server name (e.g. `NGINX_HOST=www.printservice.uni-muenchen.de`).
 
